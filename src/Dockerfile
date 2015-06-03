@@ -11,5 +11,5 @@ WORKDIR /data
 
 VOLUME ["/data"]
 
-ENTRYPOINT ["java -cp /app.jar com.quantifind.kafka.offsetapp.OffsetGetterWeb"]
-CMD ["--port", "8080"]
+ENTRYPOINT ["/usr/bin/java"]
+CMD ["-cp", "/app.jar", "com.quantifind.kafka.offsetapp.OffsetGetterWeb", "--port", "8080"]
