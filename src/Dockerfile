@@ -11,4 +11,5 @@ WORKDIR /data
 
 VOLUME ["/data"]
 
-CMD exec java -cp /app.jar com.quantifind.kafka.offsetapp.OffsetGetterWeb --port 8080 `cat /data/*.conf 2>/dev/null || true`
+ENTRYPOINT ["java -cp /app.jar com.quantifind.kafka.offsetapp.OffsetGetterWeb "]
+CMD ["--port", "8080"]
